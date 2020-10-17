@@ -11,6 +11,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.appdev_soumitri.humbirds.models.MusicActivity;
+import com.appdev_soumitri.humbirds.services.NetworkConnection;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -38,12 +39,20 @@ public class LauncherActivity extends AppCompatActivity {
         assert actionBar!=null;
         actionBar.hide();
 
+        boolean isConnected = new NetworkConnection(this).isConnected();
+
         // check if current user is logged in , if yes then take him to Homepage, else take him to LoginPage
         auth = FirebaseAuth.getInstance();
         user = auth.getCurrentUser();
 
         if(user != null)
         {
+            if(!isConnected) {
+                Toast.makeText(this, "Please ensure you have internet connection !", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(LauncherActivity.this,NoInternetActivity.class));
+                finish();
+            }
+
             DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Users");
             final String uID=user.getUid();
 

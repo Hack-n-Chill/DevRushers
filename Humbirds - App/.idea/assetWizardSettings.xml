@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/D:/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/repeat/baseline_repeat_24.xml" />
+                                      <entry key="url" value="jar:file:/D:/Android%20Studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/cancel/baseline_cancel_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ff340a" />
-                            <entry key="outputName" value="ic_loop_init" />
+                            <entry key="color" value="38211d" />
+                            <entry key="outputName" value="ic_cancel" />
                             <entry key="sourceFile" value="D:\Android_Projects\HumBirds-App" />
                           </map>
                         </option>

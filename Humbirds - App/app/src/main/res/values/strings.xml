@@ -5,4 +5,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="search">Search</string>
     <string name="title_search">Search</string>
+    <string name="long_time_no_search">It seems you have not searched for anything as yet !\n Do let us know your needs so that we can try providing you in suffice :)</string>
+    <string name="no_network_mssg">It seems you do not have internet connection. Please resolve your network issues and try again !</string>
 </resources>
