@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> c53a840687dd1b1c30249265ec03efad31962cba
 # __HumBirds__
 
 In this world of 7.8 billion population, many people are still lonely, friendless, sad and depressed. Specially in current corona affected locked down life, people are getting more and more isolated, and having no friends to talk with leaves a large negative impact on our mental health. Though we are surrounded with thousands of unknown 'friends' in social media applications, still we don't know how many of them have similar mentality, taste and choices like us . We can get matches in dating apps, but can't convert it into long-lasting relationship due to different tastes and choices.
@@ -24,8 +20,8 @@ Run the application from your IDE either on an Emulator device or on your androi
   
   <br><br>
   
-<<<<<<< HEAD
   #### Alternatively you can download the .apk file from the link below: <br>
-=======
-  #### Alternatively you can download the .apk file from the link below: <br>
->>>>>>> c53a840687dd1b1c30249265ec03efad31962cba
+  <a href="https://github.com/Hack-n-Chill/DevRushers/blob/master/Humbirds%20-%20App/APK/HumBirds.apk">HumBirds apk</a>
+  
+  #### Screenshots of the app:
+<a href="https://github.com/Hack-n-Chill/DevRushers/screenshots">Screenshots</a>  
