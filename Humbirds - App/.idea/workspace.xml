@@ -17,7 +17,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="DYEMOVQKFQJ7CADE" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_6inch" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -54,7 +54,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="DYEMOVQKFQJ7CADE" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-10-16T19:47:56.385Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-10-18T00:37:39.222Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="D:/Android_SDK" />
@@ -177,10 +177,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="562" y="272" width="414" height="287" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1602237901457" />
-    <state x="791" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602264002112">
+    <state x="791" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1602977050483">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="791" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602264002112" />
+    <state x="791" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1602977050483" />
     <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1602508321874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -197,22 +197,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1602439247426" />
-    <state width="1491" height="622" key="GridCell.Tab.0.bottom" timestamp="1602966732626">
+    <state width="1491" height="622" key="GridCell.Tab.0.bottom" timestamp="1602980179945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="622" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602966732626" />
-    <state width="1491" height="622" key="GridCell.Tab.0.center" timestamp="1602966732626">
+    <state width="1491" height="622" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1602980179945" />
+    <state width="1491" height="622" key="GridCell.Tab.0.center" timestamp="1602980179945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="622" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602966732626" />
-    <state width="1491" height="622" key="GridCell.Tab.0.left" timestamp="1602966732626">
+    <state width="1491" height="622" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1602980179945" />
+    <state width="1491" height="622" key="GridCell.Tab.0.left" timestamp="1602980179945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="622" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602966732626" />
-    <state width="1491" height="622" key="GridCell.Tab.0.right" timestamp="1602966732626">
+    <state width="1491" height="622" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1602980179945" />
+    <state width="1491" height="622" key="GridCell.Tab.0.right" timestamp="1602980179945">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1491" height="622" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602966732626" />
+    <state width="1491" height="622" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1602980179945" />
     <state x="698" y="159" key="IDE.errors.dialog" timestamp="1602845244879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -229,21 +229,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="946" y="58" width="750" height="802" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1602966827806" />
+    <state x="0" y="0" width="912" height="802" key="dock-window-2" timestamp="1602968529907">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="0" width="912" height="802" key="dock-window-2/0.0.1536.824@0.0.1536.824" timestamp="1602968529907" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1602611754129">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1602611754129" />
-    <state x="467" y="93" width="672" height="678" key="search.everywhere.popup" timestamp="1602964064460">
+    <state x="467" y="93" width="672" height="678" key="search.everywhere.popup" timestamp="1602970866496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="467" y="93" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602964064460" />
+    <state x="467" y="93" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1602970866496" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="java-field">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/appdev_soumitri/humbirds/ui/search/SearchFragment.java</url>
-          <line>57</line>
+          <line>69</line>
           <properties field="mViewModel" class="com.appdev_soumitri.humbirds.ui.search.SearchFragment" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>

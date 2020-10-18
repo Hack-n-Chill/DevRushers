@@ -47,7 +47,8 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_marginTop="15sp"
         android:layout_height="match_parent">
@@ -57,62 +58,59 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="true"
+            android:layout_weight="1000"
             android:focusableInTouchMode="true" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="#333333"
+            android:id="@+id/songToolbar"
+            android:theme="@style/CardView.Dark"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="20sp"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/selected_track_image"
+                    android:layout_width="75sp"
+                    android:layout_weight="1"
+                    android:layout_height="75sp"/>
+
+                <TextView
+                    android:id="@+id/selected_track_title"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="5sp"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <ImageView
+                    android:id="@+id/player_control"
+                    android:layout_gravity="end"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_play"
+                    android:layout_marginEnd="10sp"
+                    android:layout_width="50sp"
+                    android:layout_height="50sp"/>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
 
         <ProgressBar
             android:id="@+id/search_progressbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_gravity="center"
             android:visibility="gone" />
 
-        <RelativeLayout
-            android:id="@+id/rlNoSearchHistory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone">
-
-
-            <ImageView
-                android:layout_width="35sp"
-                android:layout_height="35sp"
-                android:layout_above="@id/tvNoPlaylistMessage"
-                android:layout_centerHorizontal="true"
-                app:srcCompat="@drawable/ic_search_24" />
-
-
-            <TextView
-                android:id="@+id/tvNoPlaylistMessage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="80sp"
-                android:padding="35sp"
-                android:text="@string/long_time_no_search"
-                android:textAlignment="center"/>
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/rlNoSearchResultFound"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="gone">
-
-            <TextView
-                android:id="@+id/tvNoSearchResultFound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="80sp"
-                android:padding="35sp"
-                android:text="No search results could be found. Try something else."
-                android:textAlignment="center"/>
-
-
-        </RelativeLayout>
-
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

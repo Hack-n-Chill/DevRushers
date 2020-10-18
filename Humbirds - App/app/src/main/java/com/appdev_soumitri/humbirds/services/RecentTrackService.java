@@ -12,7 +12,7 @@ import retrofit2.http.Query;
 // this is interface for various queries to be made
 
 public interface RecentTrackService {
-    @GET("/tracks?client_id=" + Urls.CLIENT_ID)
-    Call<List<SongModel>> getRecentTracks(@Query("created_at") String date);
+    @GET("/tracks?q=most%20listened%20songs&filter.genre_or_tag=soundtrack&limit=100&filter=public&client_id=" + Urls.CLIENT_ID)
+    Call<List<SongModel>> getBestTracks();
 }
 

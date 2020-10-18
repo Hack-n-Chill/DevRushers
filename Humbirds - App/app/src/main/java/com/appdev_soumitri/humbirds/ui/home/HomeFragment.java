@@ -1,5 +1,8 @@
 package com.appdev_soumitri.humbirds.ui.home;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -22,18 +25,22 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.appdev_soumitri.humbirds.MainActivity;
+import com.appdev_soumitri.humbirds.NoInternetActivity;
 import com.appdev_soumitri.humbirds.R;
 import com.appdev_soumitri.humbirds.models.SCTrackAdapter;
+import com.appdev_soumitri.humbirds.services.NetworkConnection;
 import com.appdev_soumitri.humbirds.services.RecentTrackService;
 import com.appdev_soumitri.humbirds.Urls;
 import com.appdev_soumitri.humbirds.models.SongModel;
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 import retrofit2.Call;
@@ -56,11 +63,16 @@ public class HomeFragment extends Fragment {
     private ImageView mPlayerControl;
 
     private DatabaseReference reference;
+    private FirebaseUser user;
 
     private HomeViewModel homeViewModel;
 
+    SharedPreferences sharedPreferences;
+
+    public HomeFragment() {}
+
     public View onCreateView(@NonNull LayoutInflater inflater,
-            ViewGroup container, Bundle savedInstanceState) {
+                             ViewGroup container, final Bundle savedInstanceState) {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
@@ -68,6 +80,12 @@ public class HomeFragment extends Fragment {
         initDB();
 
         songToolbar=root.findViewById(R.id.songToolbar);
+
+        sharedPreferences=root.getContext().getSharedPreferences("com.appdev_soumitri_humbirds", Context.MODE_PRIVATE);
+
+        HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("song_id",new HashSet<String>());
+
+        // To do: use SharedPreferences to keep track of play history and show those songs in HomeFragment
 
         // sample trial of API usage using Retrofit2
 
@@ -78,7 +96,7 @@ public class HomeFragment extends Fragment {
 
         RecentTrackService recentTrackService = retrofit.create(RecentTrackService.class);
 
-        recentTrackService.getRecentTracks("last_week").enqueue(new Callback<List<SongModel>>() {
+        recentTrackService.getBestTracks().enqueue(new Callback<List<SongModel>>() {
             @Override
             public void onResponse(Call<List<SongModel>> call, Response<List<SongModel>> response) {
                 if (response.isSuccessful()) {
@@ -104,7 +122,7 @@ public class HomeFragment extends Fragment {
         mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
-                togglePlayPause();
+                togglePlayPause(1);
             }
         });
 
@@ -120,7 +138,7 @@ public class HomeFragment extends Fragment {
         mPlayerControl.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                togglePlayPause();
+                togglePlayPause(0);
             }
         });
 
@@ -132,6 +150,11 @@ public class HomeFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(!(new NetworkConnection(getContext()).isConnected())) {
+                    startActivity(new Intent(getContext(), NoInternetActivity.class));
+                }
+
 
                 songToolbar.setVisibility(View.VISIBLE);
 
@@ -146,6 +169,8 @@ public class HomeFragment extends Fragment {
 
                 Log.d("Status","play song");
 
+                updateDB(track);
+
                 if (mMediaPlayer.isPlaying()) {
                     mMediaPlayer.stop();
                     mMediaPlayer.reset();
@@ -154,6 +179,9 @@ public class HomeFragment extends Fragment {
                 try {
                     mMediaPlayer.setDataSource(track.getStreamURL() + "?client_id=" + Urls.CLIENT_ID);
                     mMediaPlayer.prepareAsync();
+                    if(mMediaPlayer.isPlaying()) {
+                        togglePlayPause(1);
+                    }
                     Log.d("Music started:","true");
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -165,13 +193,24 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
+    private void updateDB(SongModel track) {
+        // update current song info into firebase
+    }
+
     private void initDB() {
-        // firebase RtDB operations
+        // initialise firebase RtDB operations
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        assert user != null;
+        String uid=user.getUid();
         reference = FirebaseDatabase.getInstance().getReference("Users");
 
     }
 
-    private void togglePlayPause() {
+    private void togglePlayPause(int in) {
+        if(in==1) {
+            mPlayerControl.setImageResource(R.drawable.ic_pause);
+            return;
+        }
         if (mMediaPlayer.isPlaying()) {
             mMediaPlayer.pause();
             mPlayerControl.setImageResource(R.drawable.ic_play);

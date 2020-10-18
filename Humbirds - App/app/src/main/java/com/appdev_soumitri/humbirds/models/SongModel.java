@@ -72,6 +72,10 @@ public class SongModel {
         return mArtworkURL;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public int getPlaybackCount() {
         return playbackCount;
     }

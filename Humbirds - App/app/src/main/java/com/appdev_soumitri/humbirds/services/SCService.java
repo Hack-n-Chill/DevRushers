@@ -13,6 +13,6 @@ import retrofit2.http.Query;
 // sample interface for hands on
 
 public interface SCService {
-    @GET("/tracks?client_id=" + Urls.CLIENT_ID)
-    Call<List<SongModel>> getRecentTracks(@Query("created_at") String date);
+    @GET("/tracks?&limit=100&filter=public&client_id=" + Urls.CLIENT_ID)
+    Call<List<SongModel>> getBestTracks(@Query("most%20liked%20songs") String date);
 }
