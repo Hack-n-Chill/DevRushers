@@ -21,3 +21,4 @@ Run the application from your IDE either on an Emulator device or on your androi
   <br><br>
   
   #### Alternatively you can download the .apk file from the link below: <br>
+  <a href="https://github.com/soumitri2001/DevRushers/blob/master/Humbirds%20-%20App/APK/HumBirds.apk">HumBirds apk</a>
