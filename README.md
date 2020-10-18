@@ -24,4 +24,4 @@ Run the application from your IDE either on an Emulator device or on your androi
   <a href="https://github.com/Hack-n-Chill/DevRushers/blob/master/Humbirds%20-%20App/APK/HumBirds.apk">HumBirds apk</a>
   
   #### Screenshots of the app:
-<a href="https://github.com/Hack-n-Chill/DevRushers/screenshots">Screenshots</a>  
+<a href="https://github.com/Hack-n-Chill/DevRushers/tree/master/Screenshots">Screenshots</a>  
